@@ -1,0 +1,66 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<head>
+<title>
+Blog Api- Registrarse
+</title>
+<style>
+    h1 { font-size: 30px; color: blue; text-align: center}
+    label {font-size: 20px; color: blue; text-align: center}
+form {
+    /* Sólo para centrar el formulario a la página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver el borde del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+</style>
+<script>
+    
+function registrarse()
+{
+    var contrasena = document.getElementById("contrasena").value;
+    var confirmarcontrasena = document.getElementById("confirmarcontrasena").value;
+    if (contrasena == confirmarcontrasena) 
+{
+    alert("Son iguales");
+    return false;
+} 
+else 
+{
+    alert("Las contrasenas no coinciden");
+  return true; 
+}
+}
+</script>
+
+</head>
+<body>
+<h1 id="titulo_principal" >
+    BLOG API -REGISTRARSE
+</h1>
+
+<form>
+    <label> Nombre </label>
+    <input type = "text" id="nombre">
+    <br>
+    <br>
+    <label> E-mail </label>
+    <input type = "email" id="e-mail">
+    <br>
+    <br>
+    <label> Contrase&ntilde;a </label>
+    <input type = "password" id="contrasena">
+    <br>
+    <br>
+    <label> Confirmar Contrase&ntilde;a </label>
+    <input type = "password" id="confirmarcontrasena">
+    <br>
+    <br>
+    <input type="button" value="Registrarse" onclick="registrarse()">
+<br>
+</body>
+
+</html>
